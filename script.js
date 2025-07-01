@@ -79,11 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
-});
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    particlesJS("particles-js", {
+
+
+
+
+
+
+
+
+
+     particlesJS("particles-js", {
         "particles": {
             "number": {
                 "value": 80,
@@ -210,5 +217,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         requestAnimationFrame(update);
     };
-    requestAnimationFrame(update);;
+    requestAnimationFrame(update);
 });
