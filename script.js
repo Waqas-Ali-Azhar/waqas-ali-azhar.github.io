@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add keyboard event listener when modal is open
         document.addEventListener('keydown', handleKeyPress);
+        modalImage.addEventListener('touchstart', handleTouchStart);
+        modalImage.addEventListener('touchend', handleTouchEnd);
     }
 
     // Function to close the modal
@@ -37,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.removeEventListener('animationend', handler);
             // Remove keyboard event listener when modal is closed
             document.removeEventListener('keydown', handleKeyPress);
+            modalImage.removeEventListener('touchstart', handleTouchStart);
+            modalImage.removeEventListener('touchend', handleTouchEnd);
+
         }, { once: true });
     }
 
@@ -79,6 +84,37 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+
+        let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Detect swipe direction
+    function handleTouchStart(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    }
+
+    function handleTouchEnd(event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleGesture();
+    }
+
+    function handleGesture() {
+        const swipeThreshold = 50; // Minimum px to be considered a swipe
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) > swipeThreshold) {
+            if (distance < 0) {
+                // Swiped left → next
+                navigateImage('next');
+            } else {
+                // Swiped right → previous
+                navigateImage('prev');
+            }
+        }
+    }
+
+
 });
 
 

@@ -167,7 +167,7 @@ a:hover {
     background-color: var(--bg-white);
     text-align: center;
     padding: 100px 25px;
-    min-height: 85vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -384,6 +384,9 @@ section {
     font-size: 1.6em;
     margin-bottom: 20px;
     text-align: center;
+    min-height: 82px;
+    align-content: center;
+
 }
 
 .skill-category ul {
@@ -545,10 +548,19 @@ section {
 
 .project-card .project-tech {
     font-size: 0.85em;
-    color: var(--accent-color);
+    color: var(--text-dark);;
     font-weight: 600;
     margin-bottom: 20px;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.project-tech span {
+    border: 1px solid #d55943;
+    border-radius: 0px 10px;
+    padding: 0 5px;
+    margin-right: 4px;
 }
 
 .project-links {
@@ -633,6 +645,7 @@ section {
     max-height: 80%;
     object-fit: contain; /* Ensure image fits within modal */
     animation: zoomIn 0.3s forwards;
+    min-height: 70vh;
 }
 
 #caption {
@@ -756,6 +769,8 @@ section {
     color: var(--accent-color);
     font-size: 1.4em;
     transition: transform 0.2s ease;
+    width: 20px;
+    text-align: center;
 }
 
 .contact-item:hover {
@@ -834,11 +849,11 @@ section {
     .navbar ul { flex-wrap: wrap; justify-content: center; }
     .navbar ul li { margin: 0 15px 10px; }
 
-    .hero-section { padding: 120px 20px; min-height: 70vh; }
+    .hero-section { padding: 20px 20px; min-height: 70vh; }
     .hero-content h2 { font-size: 2.8em; }
     .hero-content h1 { font-size: 1.8em; }
     .hero-content .tagline { font-size: 1.1em; }
-    .btn { width: 100%; max-width: 300px; }
+    /* .btn { width: 100%; max-width: 300px; } */
 
     .section-title { font-size: 2.2em; margin-bottom: 60px; }
 
@@ -857,6 +872,7 @@ section {
     .logo { font-size: 1.6em; }
     .navbar ul li { margin: 0 8px 8px; }
     .navbar ul li a { font-size: 0.9em; }
+    .about-content { text-align: left;}
 
     .profile-photo { width: 150px; height: 150px; }
 
