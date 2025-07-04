@@ -414,7 +414,7 @@ section {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    padding: 20px 0;
+    padding: 20px 0 0;
 }
 
 .experience-timeline::before {
@@ -468,6 +468,10 @@ section {
 .timeline-item:nth-child(odd) .timeline-content {
     right: 55%; /* Push to the left */
     transform: translateX(100%);
+}
+
+timeline-item:last-of-type{
+    margin-bottom: 0;
 }
 
 .timeline-item h3 {
