@@ -846,6 +846,9 @@ timeline-item:last-of-type{
         left: 50%;
         transform: translateX(-50%);
     }
+    .timeline-item:last-of-type .timeline-content{
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -889,5 +892,5 @@ timeline-item:last-of-type{
     .project-card h3 { font-size: 1.6em; }
     .project-link { font-size: 0.9em; }
 
-    .timeline-content { width: 95%; padding: 20px; }
+    .timeline-content { width: 100%; padding: 20px; }
 }
